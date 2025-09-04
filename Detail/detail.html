@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Chocolate De Ville - Demo</title>
+
+<header>
+     <a href="https://harvestcakes.com/">
+         <img src="/images/the.png" alt="The Harvest" style="height:40px">
+     </a>
+
+    <nav>
+      <a href="/Landing/homepage.html">HOME</a>
+       <a href="/Menu/menu.html">MENU</a>
+      <a href="#">ABOUT</a>
+    </nav>
+    <div class="actions">
+      <span class="cart">Cart 🛒</span>
+      <button class="login-btn">LOGIN / SIGN UP</button>
+      <span class="location">Location 🔍</span>
+    </div>
+  </header>
+<style>
+header {
+  border-top: 20px solid #cfa5a5;
+  background-color: #ffffff;
+  padding: 0px 0px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  
+}
+
+
+
+header .logo {
+  font-size: 22px;
+  font-weight: bold;
+  background: #b34f5a;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+header nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  justify-content: start;
+}
+header .actions {
+  display: flex;
+  gap: 15px;
+  
+}
+header .login-btn {
+  background: #b34f5a;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+    footer {
+  background: #cfa5a5;
+  padding: 40px 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #333;
+  margin-top: 140px;
+}
+footer .footer-col {
+  margin-bottom: 20px;
+}
+footer h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  margin-bottom: 6px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #333;
+}
+footer p {
+  margin: 5px 0;
+}
+
+.harvestt {
+  width: 10vw;
+}
+  *{
+    box-sizing:border-box;margin:0;padding:0
+  }
+  body{
+    font-family:Arial,system-ui; background:#fff; color:#222; padding:24px
+  }
+
+  .container{
+    display:flex;gap:40px;
+    align-items:flex-start;
+    max-width:1100px;margin:0 auto
+    
+  }
+  .left{
+    flex:1
+  }
+  .right{
+    width:480px
+  }
+
+  h1{
+    font-size:26px;margin-bottom:6px
+  }
+  .desc{
+    color:#6b6b6b;margin-bottom:12px
+  }
+  .unit-price{
+    font-weight:800;font-size:20px;margin-bottom:18px
+  }
+
+  .main-wrap{
+    max-width:520px
+  }
+  #mainImage{
+    width:100%;
+    height:auto;
+    border-radius:12px;
+    display:block;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+
+  .thumbs{display:flex;gap:10px;margin-top:12px}
+  .thumbs button{
+    border:none;background:none;padding:0;cursor:pointer;border-radius:8px;overflow:hidden;
+    outline:2px solid transparent;
+  }
+  .thumbs img{
+    width:70px;height:70px;object-fit:cover;display:block;border-radius:6px;border:2px solid transparent;
+    transition:border .15s ease, transform .12s ease;
+  }
+  .thumbs button:focus img,
+  .thumbs button.active img{ border-color:#ef7a7a; transform:scale(1.02) }
+
+  .section{margin-top:22px}
+  .section h3{font-size:18px;margin-bottom:8px}
+  .toggle-btn{
+    display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid #ddd;background:#fff;cursor:pointer;
+    font-weight:700;color:#333;
+  }
+  .toggle-btn:hover{box-shadow:0 1px 6px rgba(0,0,0,.04)}
+
+  .addons{
+    margin-top:10px;border:1px solid #eee;padding:12px;border-radius:8px;background:#faf9f9;
+    display:none; max-width:320px;
+  }
+  .addons label{display:block;padding:6px 6px;color:#333;cursor:pointer}
+  .addons small{color:#666;margin-left:6px;font-weight:600}
+
+  .note{font-size:13px;color:#6b6b6b;margin-top:6px}
+
+  .qty-row{
+    display:flex;align-items:center;gap:16px;margin-top:18px}
+  .quantity-box{
+    display:inline-flex;align-items:center;border:2px solid #ddd;border-radius:8px;overflow:hidden;
+  }
+  .quantity-box button{
+    background:#fff;border:none;padding:8px 12px;cursor:pointer;font-size:18px;line-height:1;
+  }
+  .quantity-box button:active{
+    background:#f3f3f3}
+  .quantity-box .qty-num{
+    min-width:42px;text-align:center;font-weight:700;padding:6px 8px}
+
+  .price-total{
+    font-weight:800;font-size:18px}
+  .addon-summary{
+    font-size:13px;color:#666;margin-top:8px}
+
+  .actions{
+    margin-top:20px;display:flex;gap:14px}
+  .btn-outline{
+    background:#fff;border:1px solid #ddd;padding:10px 18px;border-radius:8px;cursor:pointer}
+  .btn-primary{
+    background:#c42c2c;border:none;color:#fff;padding:10px 18px;border-radius:8px;cursor:pointer}
+  
+  * rekomendasi section */
+  .recommend{
+    margin-top:40px;
+    margin-bottom: 100px;
+}
+
+  .recommend h2{
+    font-size:20px;margin-bottom:14px}
+
+  .recommend-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+    gap:20px}
+  .rec-card{
+    border:1px solid #eee;border-radius:10px;overflow:hidden;background:#fafafa;transition:transform .15s ease,box-shadow .15s ease}
+  .rec-card:hover{
+    transform:translateY(-2px);box-shadow:0 2px 8px rgba(0,0,0,.08)}
+  .rec-card img{
+    width:100%;height:120px;object-fit:cover;display:block}
+  .rec-card .info{
+    padding:10px}
+  .rec-card .info h4{
+    font-size:15px;margin-bottom:4px}
+  .rec-card .info p{
+    font-size:13px;color:#555}
+
+
+  .alert{color:#b33;margin-top:8px;font-size:13px;display:none}
+  @media(max-width:900px){.container{flex-direction:column}.right{width:100%}}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="left">
+    <div class="main-wrap">
+      <img id="mainImage" src="/images/deatil 1.webp" alt="Main Cake">
+      <div class="thumbs" id="thumbs">
+        <button type="button" class="thumb active" aria-label="thumb 1">
+          <img src="/images/deatil 1.webp" alt="thumb 1">
+        </button>
+        <button type="button" class="thumb" aria-label="thumb 2">
+          <img src="/images/detail 2.webp" alt="thumb 2">
+        </button>
+        <button type="button" class="thumb" aria-label="thumb 3">
+          <img src="/images/detail 3.webp" alt="thumb 3">
+      </div>
+      
+    </div>
+
+     <div class="recommend">
+      <h2>Rekomendasi Lainnya</h2>
+      <div class="recommend-grid">
+        <div class="rec-card">
+          <img src="/images/rekomendasi 1.webp" alt="">
+          <div class="info">
+            <h4>Less sugar Triple Chocolate</h4>
+            <p>Rp 43.000</p>
+          </div>
+        </div>
+        <div class="rec-card">
+          <img src="/images/rekomendasi 2.webp" alt="">
+          <div class="info">
+            <h4>Classic Overa</h4>
+            <p>Rp 38.000</p>
+          </div>
+        </div>
+        <div class="rec-card">
+          <img src="/images/rekomendasi 3.webp" alt="">
+          <div class="info">
+            <h4>Mix Fruit Cheesecake</h4>
+            <p>Rp 41.000</p>
+          </div>
+        </div>
+        <div class="rec-card">
+          <img src="/images/rekomendasi 4.webp" alt="">
+          <div class="info">
+            <h4>Blueberry Cheesecake</h4>
+            <p>Rp 41.000</p>
+          </div>
+        </div>
+        <div class="rec-card">
+          <img src="/images/rekomendasi 5.webp" alt="">
+          <div class="info">
+            <h4>Milk Chocolate</h4>
+            <p>Rp 40.000</p>
+          </div>
+        </div>
+        <div class="rec-card">
+          <img src="/images/rekomendasi 6.webp" alt="">
+          <div class="info">
+            <h4>Vanilla Fruit</h4>
+            <p>Rp 40.000</p>
+          </div>
+        </div>
+        <div class="rec-card">
+          <img src="/images/rekomendasi 7.webp" alt="">
+          <div class="info">
+            <h4>Matcha Overa</h4>
+            <p>Rp 41.000</p>
+          </div>
+        </div>
+        <div class="rec-card">
+          <img src="/images/rekomendasi 8.webp" alt="">
+          <div class="info">
+            <h4>Lapis Legit Plain Slice Cake</h4>
+            <p>Rp 25.000</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="right">
+    <h1>Chocolate De Ville</h1>
+    <p class="desc">The most prominent cake & utopia of chocolate lovers.</p>
+    <div class="unit-price">Harga per porsi: <span id="basePriceLabel">Rp 40.000</span></div>
+
+
+    <div class="section">
+      <h3>Choose Add On</h3>
+      <button type="button" id="toggleAddons" class="toggle-btn">Portion Cake Decorations (Optional, max 4)</button>
+
+      <div class="addons" id="addonArea" aria-hidden="true">
+        <div class="note">Pilih maksimal <strong id="maxAdd">4</strong> dekorasi.</div>
+        <div style="margin-top:8px">
+          <label><input type="checkbox" data-price="1100"> Mini Candles <small>(+ Rp 1.100)</small></label>
+          <label><input type="checkbox" data-price="8100"> Candle No 1 <small>(+ Rp 8.100)</small></label>
+          <label><input type="checkbox" data-price="8100"> Candle No 2 <small>(+ Rp 8.100)</small></label>
+          <label><input type="checkbox" data-price="8100"> Candle No 3 <small>(+ Rp 8.100)</small></label>
+          <label><input type="checkbox" data-price="8100"> Candle No 4 <small>(+ Rp 8.100)</small></label>
+          <label><input type="checkbox" data-price="8100"> Candle No 5 <small>(+ Rp 8.100)</small></label>
+          <label><input type="checkbox" data-price="8100"> Candle No 6 <small>(+ Rp 8.100)</small></label>
+          <label><input type="checkbox" data-price="8100"> Candle No 7 <small>(+ Rp 8.100)</small></label>
+          <label><input type="checkbox" data-price="8100"> Candle No 8 <small>(+ Rp 8.100)</small></label>
+          <label><input type="checkbox" data-price="8100"> Candle No 9 <small>(+ Rp 8.100)</small></label>
+          <label><input type="checkbox" data-price="8100"> Candle No 0 <small>(+ Rp 8.100)</small></label>
+        </div>
+
+        <div class="addon-summary" id="addonSummary">Terpilih: <strong id="countSelected">0</strong> • Tambahan per item: <strong id="addonPerItem">Rp 0</strong></div>
+        <div class="alert" id="addonAlert">Maksimal 4 dekorasi.</div>
+      </div>
+    </div>
+
+    <div class="qty-row">
+      <div class="quantity-box" aria-label="Quantity control">
+        <button type="button" id="decreaseBtn" title="Kurangi">−</button>
+        <div class="qty-num" id="qty">1</div>
+        <button type="button" id="increaseBtn" title="Tambah">+</button>
+      </div>
+
+      <div class="price-total" id="totalLabel">Rp 40.000</div>
+    </div>
+
+    <div class="actions">
+      <button class="btn-outline" type="button">Add to Cart</button>
+      <button class="btn-primary" type="button">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const basePrice = 40000; 
+let quantity = 1;
+const MAX_ADDONS = 4;
+
+const mainImage = document.getElementById('mainImage');
+const thumbButtons = document.querySelectorAll('.thumbs button');
+const toggleAddonsBtn = document.getElementById('toggleAddons');
+const addonArea = document.getElementById('addonArea');
+const addonCheckboxes = addonArea.querySelectorAll('input[type="checkbox"]');
+const countSelectedEl = document.getElementById('countSelected');
+const addonPerItemEl = document.getElementById('addonPerItem');
+const addonAlert = document.getElementById('addonAlert');
+const qtyEl = document.getElementById('qty');
+const decreaseBtn = document.getElementById('decreaseBtn');
+const increaseBtn = document.getElementById('increaseBtn');
+const totalLabel = document.getElementById('totalLabel');
+const basePriceLabel = document.getElementById('basePriceLabel');
+
+const fmtRupiah = value => 'Rp ' + Number(value).toLocaleString('id-ID');
+
+basePriceLabel.textContent = fmtRupiah(basePrice);
+updateTotal();
+
+thumbButtons.forEach(btn => {
+  btn.addEventListener('click', () => swapWithMain(btn));
+
+  btn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      swapWithMain(btn);
+    }
+  });
+});
+
+function swapWithMain(button) {
+  const thumbImg = button.querySelector('img');
+  const tmp = mainImage.src;
+  mainImage.src = thumbImg.src;
+  thumbImg.src = tmp;
+
+  thumbButtons.forEach(b => b.classList.remove('active'));
+  button.classList.add('active');
+
+  updateTotal();
+}
+
+toggleAddonsBtn.addEventListener('click', () => {
+  const open = addonArea.style.display === 'block';
+  addonArea.style.display = open ? 'none' : 'block';
+  addonArea.setAttribute('aria-hidden', open ? 'true' : 'false');
+  addonAlert.style.display = 'none';
+});
+
+addonCheckboxes.forEach(cb => {
+  cb.addEventListener('change', (e) => {
+    const checked = Array.from(addonCheckboxes).filter(c=>c.checked);
+    if (checked.length > MAX_ADDONS) {
+
+      e.target.checked = false;
+      addonAlert.style.display = 'block';
+      setTimeout(()=> addonAlert.style.display = 'none', 1600);
+      return;
+    }
+    updateTotal();
+  });
+});
+
+increaseBtn.addEventListener('click', () => {
+  quantity++;
+  qtyEl.textContent = quantity;
+  updateTotal();
+});
+decreaseBtn.addEventListener('click', () => {
+  if (quantity > 1) quantity--;
+  qtyEl.textContent = quantity;
+  updateTotal();
+});
+
+function getAddonPerItem(){
+  let sum = 0;
+  addonCheckboxes.forEach(cb => {
+    if (cb.checked) sum += Number(cb.dataset.price);
+  });
+  return sum;
+}
+
+function updateTotal(){
+  const addonPerItem = getAddonPerItem();
+  const unitPrice = basePrice + addonPerItem;
+  const total = unitPrice * quantity;
+
+  countSelectedEl.textContent = Array.from(addonCheckboxes).filter(c=>c.checked).length;
+  addonPerItemEl.textContent = fmtRupiah(addonPerItem);
+  totalLabel.textContent = fmtRupiah(total);
+}
+
+updateTotal();
+</script>
+<footer>
+  <div class="footer-LOGO"> 
+    <img class="harvestt" src="/images/logo 1.png"alt="The Harvest" sytle="height:50px">
+     
+  </div>
+
+  <div class="footer-col">
+    <h4>THE HARVEST </h4>
+    <ul>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Stores</a></li>
+      <li><a href="#">Treats</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  
+  </div>
+  <div class="footer-col">
+    <h4>HELP CENTER</h4>
+    <ul>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4>CONTACT US</h4>
+    <p>📞 15005181</p>
+    <p>📱 +62 812 134 1400</p>
+    <p>📧 @theharvestcakes</p>
+  </div>
+</footer>
+</body>
+</html>

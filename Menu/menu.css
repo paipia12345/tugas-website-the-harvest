@@ -1,0 +1,193 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+
+header {
+  border-top: 20px solid #cfa5a5;
+  background-color: #ffffff;
+  padding: 0px 0px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+header .logo {
+  font-size: 22px;
+  font-weight: bold;
+  background: #b34f5a;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+header nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  justify-content: start;
+}
+header .actions {
+  display: flex;
+  gap: 15px;
+  
+}
+header .login-btn {
+  background: #b34f5a;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.hero-img img {
+  width: 100%;
+  height: 420px;     
+  object-fit: cover;  
+  display: block;
+}
+
+
+.hero-text {
+  text-align: center;
+  padding: 28px 16px 36px;
+  color: #222;
+}
+.hero-text h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+.hero-text p {
+  max-width: 700px;
+  margin: 0 auto 22px;
+  color: #6b6b6b;
+  line-height: 1.55;
+}
+
+
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pill {
+  display: inline-block;
+  padding: 14px 42px;      
+  border-radius: 50px;      
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+
+.pill-left {
+  background: #e5b6be; 
+  color: #fff;
+  border: 2px solid #e5b6be;
+}
+
+
+.pill-right {
+  background: #fff;
+  color: #333;
+  border: 2px solid #e5b6be;
+}
+
+
+.pill-left:hover {
+  background: #d99faa;
+  border-color: #d99faa;
+}
+.pill-right:hover {
+  background: #e5b6be;
+  color: #fff;
+}
+
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 50px 40px;
+ 
+  
+}
+.product {
+  text-align: center;
+  margin: 5px;
+}
+.product img {
+  width: 80%;
+  height: 76%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+.product h3 {
+  font-size: 18px;
+  margin-bottom: 0 auto;
+}
+.product p {
+  font-size: 14px;
+  color: #555;
+}
+
+
+footer {
+  background: #cfa5a5;
+  padding: 40px 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #333;
+}
+footer .footer-col {
+  margin-bottom: 20px;
+}
+footer h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  margin-bottom: 6px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #333;
+}
+footer p {
+  margin: 5px 0;
+}
+
+.harvestt {
+  width: 10vw;
+}
